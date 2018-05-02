@@ -27,4 +27,10 @@ class FizzbuzzTests: XCTestCase {
         XCTAssertEqual(result, true)
     }
     
+    func testIsDivisibleByFive() {
+        let brain = Brain()
+        let result = brain.isDivisibleByFive(number: 5)
+        XCTAssertEqual(result, true)
+    }
+    
 }

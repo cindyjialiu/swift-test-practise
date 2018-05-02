@@ -8,5 +8,11 @@
 
 import Foundation
 class Brain {
+    func isDivisibleByThree(number: Int) -> Bool {
+        return true
+    }
     
+    func isDivisibleByFive(number: Int) -> Bool {
+        return true
+    }
 }
