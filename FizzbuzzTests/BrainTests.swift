@@ -11,6 +11,7 @@ import XCTest
 
 class FizzbuzzTests: XCTestCase {
     
+    let brain = Brain()
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,16 +22,29 @@ class FizzbuzzTests: XCTestCase {
         super.tearDown()
     }
     
+    func testIsDivisibleByFifteen() {
+        let result = brain.isDivisibleByFifteen(number: 15)
+        XCTAssertEqual(result, true)
+    }
+    
     func testIsDivisibleByThree() {
-        let brain = Brain()
         let result = brain.isDivisibleByThree(number: 3)
         XCTAssertEqual(result, true)
     }
     
+    func testIsNotDivisibleByThree() {
+        let result = brain.isDivisibleByThree(number: 4)
+        XCTAssertEqual(result, false)
+    }
+    
     func testIsDivisibleByFive() {
-        let brain = Brain()
         let result = brain.isDivisibleByFive(number: 5)
         XCTAssertEqual(result, true)
+    }
+    
+    func testSayFizz() {
+        let result = brain.check(number: 3)
+        XCTAssertEqual(result, "Fizz")
     }
     
 }

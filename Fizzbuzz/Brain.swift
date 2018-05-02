@@ -8,11 +8,23 @@
 
 import Foundation
 class Brain {
+    func isDivisibleBy(divisor: Int, number: Int) -> Bool {
+        return number % divisor == 0
+    }
+    
+    func isDivisibleByFifteen(number: Int) -> Bool {
+        return isDivisibleBy(divisor: 15, number: number)
+    }
+    
     func isDivisibleByThree(number: Int) -> Bool {
-        return true
+        return isDivisibleBy(divisor: 3, number: number)
     }
     
     func isDivisibleByFive(number: Int) -> Bool {
-        return true
+        return isDivisibleBy(divisor: 5, number: number)
+    }
+    
+    func check(number: Int) -> String {
+        return "Fizz"
     }
 }
